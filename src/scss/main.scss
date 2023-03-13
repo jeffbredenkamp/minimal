@@ -647,7 +647,7 @@ html {
   
   @media (max-width: $layout-lg) {
     #hero {
-      padding: $spacing-lg $spacing-md;
+      padding: $spacing-lg $spacing-sm;
     }
   }
 
@@ -742,6 +742,12 @@ html {
         box-shadow: 0px 8px 8px -5px rgba(0, 0, 0, 0.1);
     }
 
+    .grid {
+      .grid-col {
+        margin-top: $spacing-sm;
+      }
+    }
+
     .portfolio-item {
         position: relative;
         cursor: pointer;
@@ -825,7 +831,21 @@ html {
 
 @media (max-width: $layout-lg) {
   #work {
-    padding: 0 $spacing-md $spacing-md $spacing-md;
+    padding: 0 $spacing-sm $spacing-md $spacing-sm;
+
+    .portfolio-item {
+      .portfolio-text {
+        padding: $spacing-sm;
+
+        h3 {
+          font-size: 1.15rem;
+        }
+
+        p {
+          font-size: .75rem;
+        }
+    }
+    }
   }
 }
 
