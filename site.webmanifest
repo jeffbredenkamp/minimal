@@ -1,0 +1,9 @@
+{
+    "name": "Jeff Bredenkamp",
+    "theme_color": "#ff3333",
+    "background_color": "#f7f7f7",
+    "display": "browser",
+    "orientation": "portrait",
+    "scope": "vanderberg.co.uk",
+    "start_url": "vanderberg.co.uk"
+  }

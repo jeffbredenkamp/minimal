@@ -59,6 +59,10 @@ $spacing-lg: 6rem;
 $spacing-xlg: 12rem;
 $spacing-xxlg: 24rem;
 
+// Shadow
+
+$shadow-md: 0px 8px 8px -5px rgba(0, 0, 0, 0.1);
+
 // Layout
 $layout-sm: 576px;
 $layout-md: 768px;
@@ -424,7 +428,12 @@ html {
         background: $color-primary;
         border-radius: 50%;
         display: inline-block;
-        box-shadow: 0px 8px 8px -5px rgba(0, 0, 0, 0.1);
+        box-shadow: $shadow-md;
+        transition: 0.35s ease-out;
+
+        &:hover {
+          background: $color-secondary;
+        }
 
         a {
             color: #fff;
@@ -704,7 +713,7 @@ html {
   .palette {
     overflow: hidden;
     border-radius: 0.5rem;
-    box-shadow: 0px 8px 8px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: $shadow-md;
 
     .colour-item {
       height: 100px;
@@ -739,7 +748,7 @@ html {
         display: block;
         overflow: hidden;
         border-radius: .75rem;
-        box-shadow: 0px 8px 8px -5px rgba(0, 0, 0, 0.1);
+        box-shadow: $shadow-md;
     }
 
     .grid {
@@ -820,6 +829,47 @@ html {
                 opacity: .65;
             }
         }
+    }
+}
+
+// Back to top
+
+#back-to-top {
+    background: white;
+    border-radius: 45px;
+    visibility: hidden;
+    opacity: 0;
+    bottom: $spacing-md;
+    height: 45px;
+    width: 45px;
+    right: $spacing-md;
+    position: fixed;
+    box-shadow: $shadow-md;
+    transition: 0.25s ease-out;
+
+    svg {
+      fill: $color-secondary;
+      height: 22px;
+      position: absolute;
+      width: 24px;
+      transform: translateX(-50%) translateY(-50%);
+      display: block;
+      left: 50%;
+      top: 50%;
+    }
+
+    &:hover {
+      background: $color-primary;
+
+      svg {
+        fill: white;
+        opacity: 1;
+      }
+    }
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
     }
 }
 

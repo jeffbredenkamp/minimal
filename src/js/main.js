@@ -48,3 +48,27 @@ menuBtn.onkeydown = function(e) {
 		);
 	}
   };
+
+  // Back to top
+
+var scrollpos = window.scrollY;
+var backToTop = document.getElementById("back-to-top");
+
+function add_class_on_scroll() {
+  backToTop.classList.add("active");
+}
+
+function remove_class_on_scroll() {
+  backToTop.classList.remove("active");
+}
+
+window.addEventListener('scroll', function(){ 
+    scrollpos = window.scrollY;
+
+    if(scrollpos > 250){
+        add_class_on_scroll();
+    }
+    else {
+        remove_class_on_scroll();
+    }
+});
